@@ -32,19 +32,19 @@ public class BinaryTree {
 	 	public List<Integer> inorderTraversalWithRecursion(TreeNode root) {
 	 		// left, root, right
 	        List<Integer> result = new ArrayList<Integer>();
-	        helper(root,result);
+	        inorderHelper(root,result);
 	        return result;
 	        
 	    }
 
-	    public void helper(TreeNode root, List<Integer> result){
+	    public void inorderHelper(TreeNode root, List<Integer> result){
 	        if(root == null){
 	            return;
 	        }
 
-	        helper(root.left, result);
+	        inorderHelper(root.left, result);
 	        result.add(root.val);
-	        helper(root.right,result);
+	        inorderHelper(root.right,result);
 	    }
 	    
 	    public static void main(String[] args) {
