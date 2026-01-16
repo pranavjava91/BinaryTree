@@ -36,6 +36,22 @@ public class BinaryTree {
 	        return result;
 	        
 	    }
+	 	
+	 	public List<Integer> preOrderTraversalWithRecursion(TreeNode root) {
+	 		// left, root, right
+	        List<Integer> result = new ArrayList<Integer>();
+	        preOrderHelper(root,result);
+	        return result;
+	        
+	    }
+	 	
+	 	public List<Integer> postOrderTraversalWithRecursion(TreeNode root) {
+	 		// left, root, right
+	        List<Integer> result = new ArrayList<Integer>();
+	        postOrderHelper(root,result);
+	        return result;
+	        
+	    }
 
 	    public void inorderHelper(TreeNode root, List<Integer> result){
 	        if(root == null){
@@ -46,6 +62,26 @@ public class BinaryTree {
 	        result.add(root.val);
 	        inorderHelper(root.right,result);
 	    }
+	    
+	    public void preOrderHelper(TreeNode root, List<Integer> result){
+	        if(root == null){
+	            return;
+	        }
+	        result.add(root.val);
+	        preOrderHelper(root.left, result);
+	        preOrderHelper(root.right,result);
+	    }
+	    
+	    public void postOrderHelper(TreeNode root, List<Integer> result){
+	        if(root == null){
+	            return;
+	        }
+	        postOrderHelper(root.left, result);
+	        postOrderHelper(root.right,result);
+	        result.add(root.val);
+
+	    }
+	    
 	    
 	    public static void main(String[] args) {
 	    	BinaryTree binaryTree = new BinaryTree();
@@ -71,6 +107,12 @@ public class BinaryTree {
 	    	
 	    	System.out.println(binaryTree.inorderTraversalWithRecursion(root));
 	    	System.out.println(binaryTree.inorderTraversalWithoutRecursion(root));
+	    	
+	    	System.out.println(binaryTree.preOrderTraversalWithRecursion(root));
+	    	
+	    	System.out.println(binaryTree.postOrderTraversalWithRecursion(root));
+
+
 
 	    		
 		
