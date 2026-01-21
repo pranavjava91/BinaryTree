@@ -6,7 +6,7 @@ public class Example {
 		  public static void main(String[] args) {
 		    boolean flag = palindromeCheck("sitonapanotis");
 		    System.out.println(flag);
-		    flag = palindromeCheck("nine");
+		    flag = palindromeCheck("nien");
 		    System.out.println(flag);
 		    flag = palindromeCheck("amanaplanacanalpanama");
 		    System.out.println(flag);
