@@ -12,6 +12,8 @@ public class LongestSubstring {
 		  int left = 0;
 
 	        int maxLength = 0;
+	        
+	       int p =  Integer.parseInt(s);
 
 	        Set<Character> characterSet = new HashSet<Character>();
 	        
