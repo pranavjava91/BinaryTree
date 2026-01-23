@@ -55,8 +55,8 @@ public class QuickSort {
 			
 		}
 		
-		sort(nums,low,end);
-		sort(nums,start,high);
+		sort(nums,low,end); // nums, 0,4
+		sort(nums,start,high);// nums,5,7
 		
 		// now my pivot is at correct index, sort the two halves recursively
 		
