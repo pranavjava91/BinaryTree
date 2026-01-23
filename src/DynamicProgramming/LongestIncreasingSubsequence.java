@@ -1,6 +1,7 @@
 package DynamicProgramming;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,7 @@ public class LongestIncreasingSubsequence {
 		int[] result = new int[nums.length + 1];
 
 		dp[0] = nums[0];
+
 
 		for (int i = 0; i < nums.length; i++) {
 			List<Integer> numList = new ArrayList<Integer>();
