@@ -29,7 +29,7 @@ public class QuickSort {
 	
 	public void sort(int[] nums, int low, int high) {
 		
-		if(low>=high) {
+		if(low>=high) { // if lower index greater than or equal to or is past or crosses higher index return,  low-5,high-4 or low-5,high-5
 			return;
 		}
 		
@@ -55,17 +55,23 @@ public class QuickSort {
 			
 		}
 		
-		sort(nums,low,end); // nums, 0,4
-		sort(nums,start,high);// nums,5,7
-		
 		// now my pivot is at correct index, sort the two halves recursively
+		// all the elements less than pivot will be on the left had side
+		// all the elements greater than pivot will be on the right had side
+		// we are putting the pivot at the correct position
+		// if low > end returns or start > high returns 
+
+		
+		sort(nums,low,end); // nums,low,high - actual call nums, 0,4 , end- high , end changes from low to end --, from 0 to changed end
+		sort(nums,start,high);// nums,5,7, start - low, start changes from low to start++, from changed start to last 
+		
 		
 	}
 
 	public static void main(String[] args) {
 		int[] arr = { 20, 2, 7, 12, 15, 1, 6, 8 };
 		QuickSort quickSort = new QuickSort();
-		quickSort.sort(arr,0,arr.length-1);
+		quickSort.sort(arr,0,arr.length-1); // arr,low,high
 		
 		for(int res:arr) {
 			System.out.println(res);
