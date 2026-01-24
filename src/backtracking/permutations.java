@@ -22,7 +22,8 @@ public class permutations {
 		}
 
 		for (int number : nums) { //123
-			if (tempList.contains(number))
+			if (tempList.contains(number))// logically check if it comes back to 1 and branches out to 3 instead of 2, 
+											//this happens if you try to solve the program from the example and try to get the first few cases instead of trying to understand the recursion before getting the first few cases right
 				continue;
 
 			tempList.add(number); // adds a number
