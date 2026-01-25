@@ -17,6 +17,8 @@ public class LongestSubstring {
 
 	        Set<Character> characterSet = new HashSet<Character>();
 	        
+	        
+	        
 	        char[] chars = s.toCharArray();
 	        
 	        for(int right =0;right<s.length();right++){	  
@@ -24,6 +26,7 @@ public class LongestSubstring {
 	                    characterSet.remove(s.charAt(left));
 	                    left++;
 	                }
+	                Character.isWhitespace(chars[right]);
 	                characterSet.add(s.charAt(right));
 	                maxLength = Math.max(maxLength,right-left+1);
 	               
