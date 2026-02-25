@@ -15,11 +15,12 @@ public class DuplicateArray {
 
 	public List<Integer> findDuplicates(int[] nums) {
 
-
+		List<Integer> reList = new ArrayList<Integer>();
 		List<Integer> numList = Arrays.stream(nums).boxed().collect(Collectors.toList());
 
 		Set<Integer> resultSet = numList.stream().filter(i -> Collections.frequency(numList, i) > 1).collect(Collectors.toSet());
-		return List.copyOf(resultSet);
+		reList.addAll(resultSet);
+		return reList;
 
 	}
 
