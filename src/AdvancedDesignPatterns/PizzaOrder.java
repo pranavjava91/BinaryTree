@@ -1,5 +1,6 @@
 package AdvancedDesignPatterns;
 
+//concrete command
 public class PizzaOrder implements Order {
 	private Chef chef;
 

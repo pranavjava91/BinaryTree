@@ -1,5 +1,6 @@
 package AdvancedDesignPatterns;
 
+//receiver
 public class Chef {
 	
 	void makePizza() {

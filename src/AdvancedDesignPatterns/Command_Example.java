@@ -1,5 +1,6 @@
 package AdvancedDesignPatterns;
 
+//client
 public class Command_Example {
 
 	public static void main(String[] args) {
