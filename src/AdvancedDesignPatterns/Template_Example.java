@@ -33,3 +33,14 @@ public class Template_Example {
  * parts that differ. This avoids code duplication and ensures consistent
  * workflow.
  */
+
+/*
+ * An abstract class is a class that cannot be instantiated on its own and
+ * serves as a blueprint for subclasses, while an abstract method is a method
+ * declaration within an abstract class (or interface) that has no
+ * implementation. The core difference is that an abstract class is a structural
+ * component of inheritance, and an abstract method is a specific member of that
+ * class (or an interface) that enforces a contract for implementation in
+ * derived classes.
+ * 
+ */
