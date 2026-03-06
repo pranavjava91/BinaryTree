@@ -23,13 +23,23 @@ public class DuplicateArray {
 		return reList;
 
 	}
+	
+	public List<Integer> findDuplicatesNew(int[] nums){
+		
+		List<Integer> numList = Arrays.stream(nums).boxed().collect(Collectors.toList());
+		HashSet<Integer> seen = new HashSet<Integer>();
+		
+		List<Integer> result = numList.stream().filter(i->!seen.add(i)).collect(Collectors.toList());
+		return result;
+		
+	}
 
 	public static void main(String[] args) {
 
 		int[] nums = { 4, 3, 2, 7, 8, 2, 3, 1 };
 
 		DuplicateArray duplicateArray = new DuplicateArray();
-		List<Integer> numbers = duplicateArray.findDuplicates(nums);
+		List<Integer> numbers = duplicateArray.findDuplicatesNew(nums);
 		for (Integer number : numbers) {
 			System.out.println(number);
 		}
